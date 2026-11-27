@@ -1,0 +1,23 @@
+Pregunta 1: ¿Qué está sucediendo visualmente cuando mantienes el clic sobre una card? ¿Qué propiedad o selector CSS crees que lo provoca?
+
+La card se vuelve a mostrar con un giro en diagonal, como si viniera desde el fondo de la pantalla hacia el frente. Lo provoca el selector :active junto con la propiedad animation, que usa los keyframes slit-in-diagonal-2.
+
+Pregunta 2: ¿Qué cambió en el comportamiento de las cards al recargar la página?
+
+Ahora la animación se ejecuta sola al cargar la página y todas las cards entran girando en diagonal al mismo tiempo, sin tener que dar clic.
+
+Pregunta 3: ¿Qué 3 selectores elegiste? Describe brevemente qué hace cada uno y cómo se comportó la animación al usarlo.
+
+.card:active se aplica mientras se mantiene presionado el clic, la animación solo se ve en ese momento.
+.card:focus-within se aplica cuando algo dentro de la card tiene el foco, la animación inicia al dar clic en el botón de la card.
+.col-md-4:nth-child(odd) .card se aplica solo a las cards que están en una posición impar, al recargar se animan una sí y una no.
+
+Pregunta 4: ¿Para qué sirve un @keyframes en CSS? Explícalo con tus propias palabras.
+
+Sirve para definir los pasos de una animación, es decir, cómo se ve el elemento al inicio, en medio y al final. El navegador calcula los cambios entre esos puntos.
+
+Pregunta 5: Elige 3 propiedades de las animaciones que usaste y explica qué hace cada una.
+
+transform: permite mover, girar o cambiar el tamaño de un elemento.
+animation-timing-function: indica el ritmo de la animación, por ejemplo si empieza lento y termina rápido.
+animation-fill-mode: indica qué estilos conserva el elemento antes y después de la animación, con both aplica el inicio y mantiene el final.

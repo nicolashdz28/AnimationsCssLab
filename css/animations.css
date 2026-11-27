@@ -44,7 +44,105 @@
     }
 }
 /* CARD CALL */
-.card:active{
+.card{
     -webkit-animation: slit-in-diagonal-2 450ms linear both;
     animation: slit-in-diagonal-2 450ms linear both;
+}
+@-webkit-keyframes kenburns-bottom {
+    0% {
+        transform: scale(1) translateY(0);
+        transform-origin: 50% 84%;
+    }
+    100% {
+        transform: scale(1.25) translateY(15px);
+        transform-origin: bottom;
+    }
+}
+@keyframes kenburns-bottom {
+    0% {
+        transform: scale(1) translateY(0);
+        transform-origin: 50% 84%;
+    }
+    100% {
+        transform: scale(1.25) translateY(15px);
+        transform-origin: bottom;
+    }
+}
+.card-img-top:hover{
+    -webkit-animation: kenburns-bottom 5s ease-out both;
+    animation: kenburns-bottom 5s ease-out both;
+}
+@-webkit-keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.navbar-brand{
+    -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+@-webkit-keyframes scale-up-center {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.15);
+    }
+}
+@keyframes scale-up-center {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.15);
+    }
+}
+@-webkit-keyframes shake-horizontal {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    20%, 60% {
+        transform: translateX(-8px);
+    }
+    40%, 80% {
+        transform: translateX(8px);
+    }
+}
+@keyframes shake-horizontal {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    20%, 60% {
+        transform: translateX(-8px);
+    }
+    40%, 80% {
+        transform: translateX(8px);
+    }
+}
+.card .btn:hover{
+    -webkit-animation: scale-up-center 0.4s ease-in-out both;
+    animation: scale-up-center 0.4s ease-in-out both;
+}
+.card .btn:active{
+    -webkit-animation: shake-horizontal 0.8s ease-in-out both;
+    animation: shake-horizontal 0.8s ease-in-out both;
 }
